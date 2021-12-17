@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from './LoinPage/login';
-import {Provider} from "react-redux"
-import {storage} from "./Store/storage"
+import UserList from './container/usersList';
+import { Provider } from "react-redux"
+import { Storage } from "./redux/store/storage"
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={storage}>
-    <Login/>
+    <Provider store={Storage}>
+      <UserList />
     </Provider>
-    
   </React.StrictMode>,
   document.getElementById('root')
 );
